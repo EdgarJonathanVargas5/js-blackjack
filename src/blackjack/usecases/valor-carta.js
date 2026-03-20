@@ -1,0 +1,15 @@
+/**
+ * Esta funcion asigna valor a la carta
+ * @param {String} carta 
+ * @returns {Number}  retorna el valor
+ */
+
+export const valorCarta = ( carta ) => {
+
+    if (!carta)
+        throw new Error("carta es necesaria");
+
+    const valor = carta.substring(0, carta.length - 1);
+
+    return ( isNaN( valor ) ) ? (( valor === 'A' ) ? 11 : 10) : valor * 1;          
+}
